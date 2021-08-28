@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">CompraVenta</string>
+
+    <!--    Pantalla principal-->
+    <string name="title">Título</string>
+    <string name="descriptionTitle">Descripción (opcional)</string>
+    <string name="emailTitle">Correo de contacto</string>
+    <string name="priceTitle">Precio</string>
+    <string name="categoryTitle">Categoría</string>
+    <string name="discountTitle">Ofrecer descuento de envío</string>
+    <string name="takeAwayTitle">Retiro en persona</string>
+    <string name="takeAwayAddress">Dirección de retiro</string>
+    <string name="terms">Términos y condiciones</string>
+    <string name="publish">Publicar</string>
+
+
+
 </resources>
