@@ -4,7 +4,9 @@
     <!--    Pantalla principal-->
     <string name="title">Título</string>
     <string name="descriptionTitle">Descripción (opcional)</string>
+    <string name="description">Descripción del producto...</string>
     <string name="emailTitle">Correo de contacto</string>
+    <string name="email">Correo electrónico</string>
     <string name="priceTitle">Precio</string>
     <string name="categoryTitle">Categoría</string>
     <string name="discountTitle">Ofrecer descuento de envío</string>
