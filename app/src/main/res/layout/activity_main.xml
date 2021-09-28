@@ -1,133 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewTitulo"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title" />
+        android:orientation="vertical"
+        android:padding="12dp"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/title" />
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/descriptionTitle" />
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/title"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minLines="3"
-        android:maxLines="7"
-        android:ems="10"
-        android:hint="@string/description"
-        android:inputType="textMultiLine|textPersonName" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descriptionTitle" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/emailTitle" />
+        <EditText
+            android:id="@+id/editTextTextPersonName8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/description"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textPersonName"
+            android:maxLines="7"
+            android:minLines="3" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email"/>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emailTitle" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/priceTitle" />
+        <EditText
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/priceTitle" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/priceTitle" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/categoryTitle" />
+        <EditText
+            android:id="@+id/editTextTextPersonName9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/priceTitle"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/categoryTitle" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/discountTitle" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/discountTitle" />
+
+        <!--TODO: ajustar para que ambos queden en la misma línea-->
+        <!--Resuelto en base a documentacion https://developer.android.com/guide/topics/ui/layout/relative-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/seekBarText"
+                android:max="100"
+                android:min="0" />
+
+            <!-- TODO: Generar un recurso de String para el texto 100-->
+            <TextView
+                android:id="@+id/seekBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:ems="2"
+                android:text="100"
+                android:textAlignment="textEnd" />
+        </RelativeLayout>
 
 
-    <!--TODO: ajustar para que ambos queden en la misma línea-->
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:min="0"
-        android:max="100"
-        />
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/takeAwayTitle" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/seekBarText"
-        android:text="porcentaje"
-        />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/takeAwayAddress" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/takeAwayTitle" />
+        <EditText
+            android:id="@+id/editTextTextPersonName10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="postalAddress"
+            android:ems="10"
+            android:hint="@string/takeAwayAddress"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/takeAwayAddress" />
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/terms" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/takeAwayAddress" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/publish" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/terms" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/publish" />
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
